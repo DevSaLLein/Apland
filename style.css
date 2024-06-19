@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+:root {
+    --text-color: #101720;
+    --blue-color: #4088ff;
+}
+
+html {
+    font-size: 16px;
+    color: var(--text-color);
+    user-select: none;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1;
+    transition: box-shadow .5s ease;
+}
+
+.header-active {
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.100);
+}
+
+header > div { 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: inherit;
+}
+
+header > div > h1 {
+    text-transform: uppercase;
+    color: #0d6efd
+}
+
+header > div > section {
+    display: flex;
+    align-items: center;
+    gap: 4rem
+}
+
+header > div > section > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    height: 3rem;
+    width: 8rem;
+    border-radius: 10px;
+    background-color: #0d6efd;
+}
+
+header > div > section >  button > a {
+    color: white;
+    text-decoration: none;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .9rem;
+}
+
+header > div > section > nav > ul{
+    list-style-type: none;
+    display: flex;
+    gap: 1.5rem
+}
+
+header > div > nav > ul > li {
+    font-size: .9rem;
+}
+
+/* Main */
+
+main > section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100dvh;
+}
+
+.home {
+    max-width: 1255px;
+    margin: 0 auto;
+    gap: 10rem
+}
+
+.home > div > h2 {
+    margin-top: 20px;
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    word-wrap: 100px;
+    word-spacing: -1px;
+    line-height: 65px;
+    margin-bottom: 40px;
+}
+
+.title-page {
+    position: relative;
+}
+
+.title-page::after {
+    content: '';
+    position: absolute;
+    background-color: var(--blue-color);
+    padding: 2rem;
+    opacity: .2;
+    border-radius: 100%;
+    bottom: -10px;
+    right: 130px;
+}
+
+.title-page::before { 
+    content: '';
+    position: absolute;
+    background-color: orange;
+    opacity: .2;
+    border-radius: 100%;
+    padding: 2rem;
+    top: 10px;
+    left: -30px;
+}
+
+.home > div > p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.home > div > p > span {
+    color: var(--blue-color)
+}
+
+.home > div > span {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.home > div > span > img {
+    height: 15px;
+    transform: rotateZ(160deg);
+}
+
+.home > div > button {
+    padding: .8rem 1.5rem;
+    border: none;
+    background-color: orange;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.home > div > h2 > span {
+    color: red
+}
+
+.home > figure {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.home > figure > img {
+    width: 100%;
+    border-radius: inherit;
+}
+
+/* ToggleMode  */
+
+.toggleMode-container > button {
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    position: fixed;
+    border-radius: 100%;
+    bottom: 30px;
+    left: 30px;
+    background-color: var(--text-color);
+
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.100);;
+
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    cursor: pointer;
+}
+
+button > span {
+    background: url('./assets/moon.svg') no-repeat top center/cover;
+    width: 100%;
+    height: 100%;
+
+    transform: rotate(360deg);
+
+    transition: all .4s ease;
+}
+
+.toggleMode-container > button > .toggleModeSun > span{
+    background: url('./assets/sun.svg') no-repeat top center/cover;
+    width: 100%;
+    height: 100%;
+
+    transform: rotate(360deg);
+    transition: all .4s ease;
+}
+
+@media screen and (width <= 700px) {
+    body {
+        background-color: pink;
+    }
+}
