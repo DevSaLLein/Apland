@@ -8,18 +8,10 @@ window.addEventListener("scroll", () => {
 window.addEventListener("load", () => {
 
     let toggleButton = document.querySelector("#toggleButton");
-
-
+    
     toggleButton.addEventListener("click", () => {
 
-        console.log('es')
-        toggleButton.firstChild().classList.toggle("toggleModeSun")
+        toggleButton.children.item(0).classList.toggle('toggleModeSun')
+        document.body.classList.toggle("darkMode");
     })
 })
-
-
-let toggleButton = document.querySelector("#toggleButton");
-
-toggleButton.addEventListener('click', () => {
-    console.log('o')
-}) 
