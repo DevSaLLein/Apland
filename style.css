@@ -10,6 +10,8 @@
 :root {
   --text-color: #101720;
   --blue-color: #4088ff;
+
+  --border-color: rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -20,6 +22,7 @@ body {
 body.darkMode {
   background-color: var(--text-color);
   color: white;
+  --border-color: rgba(255, 255, 255, 0.2);
 }
 
 body.darkMode > header {
@@ -33,6 +36,7 @@ html {
 
 header {
   width: 100%;
+  top: 0;
   position: fixed;
   background-color: white;
   align-items: center;
@@ -107,12 +111,16 @@ header > div > section > nav > ul > li::after {
   position: absolute;
   bottom: -2px;
   left: 0;
-
   background-color: var(--text-color);
   height: 2px;
+  opacity: 0.8;
   width: 0;
   border-radius: 10px;
   transition: all 0.2s ease;
+}
+
+body.darkMode header > div > section > nav > ul > li::after {
+  background-color: white;
 }
 
 header > div > section > nav > ul > li:hover::after {
@@ -124,14 +132,15 @@ header > div > section > nav > ul > li:hover::after {
 main > section {
   display: flex;
   justify-content: space-around;
+  padding: 0 3rem;
   align-items: center;
-  height: 100dvh;
   max-width: 1255px;
+  margin: 0 auto;
 }
 
 .home {
-  margin: 0 auto;
-  gap: 10rem;
+  gap: 2rem;
+  height: 95dvh;
 }
 
 .home > div > h2 {
@@ -215,6 +224,75 @@ main > section {
   border-radius: inherit;
 }
 
+/* Features */
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.features-container > div > .features-header {
+  text-align: center;
+}
+
+.features-container > div > .features-header > p {
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  display: inline;
+  color: green;
+  background-color: rgba(0, 128, 0, 0.2);
+  border-radius: 10px;
+}
+
+.features-container > div > .features-header > h3 {
+  margin-top: 20px;
+  font-size: 3rem;
+}
+
+.features-container > div > .features-header > hr {
+  margin: 40px auto;
+  width: 15%;
+  height: 0.4rem;
+  border: none;
+  background-image: linear-gradient(to right, hotpink, blue);
+  border-radius: 10px;
+}
+
+.featuresTools-container {
+  margin-top: 5px;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.featuresTools-container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 200px;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 2px solid var(--border-color);
+  transition: transform 0.2s ease;
+}
+
+.featuresTools-container > div:hover {
+  transform: scale(1.1);
+}
+
+.featuresTools-container > div > h4 {
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+.featuresTools-container > div > p {
+  text-align: center;
+}
+
 /* ToggleMode  */
 
 .toggleMode-container {
@@ -222,6 +300,7 @@ main > section {
   height: 60px;
   border-radius: 100%;
 }
+
 .toggleMode-container > button {
   padding: 10px;
   width: inherit;
@@ -232,9 +311,7 @@ main > section {
   bottom: 30px;
   left: 30px;
   background-color: var(--text-color);
-
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
-
   display: flex;
   justify-content: center;
   align-self: center;
@@ -245,9 +322,7 @@ button > span {
   background: url("./assets/moon.svg") no-repeat top center/cover;
   width: 100%;
   height: 100%;
-
   transform: rotate(0deg);
-
   transition: all 0.4s ease;
 }
 
@@ -255,13 +330,12 @@ button > span {
   background: url("./assets/sun.svg") no-repeat top center/cover;
   width: 100%;
   height: 100%;
-
   transform: rotate(360deg);
   transition: all 0.4s ease;
 }
 
-@media screen and (width <= 700px) {
-  body {
-    background-color: pink;
+@media screen and (width <= 900px) {
+  .home figure {
+    display: none;
   }
 }
