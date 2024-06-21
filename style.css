@@ -5,10 +5,12 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Inter";
+  list-style-type: none;
 }
 
 :root {
   --text-color: #101720;
+  --texto-secondary-color: gray;
   --blue-color: #4088ff;
 
   --border-color: rgba(0, 0, 0, 0.2);
@@ -22,7 +24,7 @@ body {
 body.darkMode {
   background-color: var(--text-color);
   color: white;
-  --border-color: rgba(255, 255, 255, 0.2);
+  --border-color: rgba(255, 255, 255, 0.1);
 }
 
 body.darkMode > header {
@@ -46,11 +48,7 @@ header {
 }
 
 .header-active {
-  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
-}
-
-.darkMode.header-active {
-  box-shadow: 1px 1px 10px 1px rgba(255, 255, 255, 0.9);
+  box-shadow: 1px 1px 10px 1px var(--border-color);
 }
 
 header > div {
@@ -68,7 +66,7 @@ header > div > h1 {
 header > div > section {
   display: flex;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
 }
 
 header > div > section > button {
@@ -104,27 +102,56 @@ header > div > section > nav > ul > li {
   position: relative;
   font-size: 0.9rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-header > div > section > nav > ul > li::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  background-color: var(--text-color);
-  height: 2px;
-  opacity: 0.8;
-  width: 0;
-  border-radius: 10px;
+#home-menu-container {
+  position: relative;
   transition: all 0.2s ease;
 }
 
-body.darkMode header > div > section > nav > ul > li::after {
-  background-color: white;
+#home-menu-container:hover > img {
+  transform: rotate(270deg);
 }
 
-header > div > section > nav > ul > li:hover::after {
-  width: 100%;
+#home-menu-container > div {
+  position: absolute;
+  background: transparent;
+  padding: 1rem 2rem;
+  bottom: -90px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  opacity: 0;
+
+  transition: all 0.2s ease;
+}
+
+#home-menu-container > div > ul {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+#home-menu-container > div > ul > hr {
+  background-color: var(--border-color);
+  border-radius: 10px;
+}
+
+#home-menu-container:hover {
+  overflow: visible;
+}
+
+#home-menu-container:hover div {
+  opacity: 1;
+  border: 1px solid var(--border-color);
+  bottom: -120px;
+}
+
+header > div > section > nav > ul > li > img {
+  transform: rotate(90deg);
+  transition: transform 0.2s ease;
 }
 
 /* Main */
@@ -208,6 +235,10 @@ main > section {
   border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
 }
 
 .home > div > h2 > span {
@@ -281,8 +312,25 @@ main > section {
   transition: transform 0.2s ease;
 }
 
+.featuresTools-container > div > figure {
+  width: 60px;
+
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  display: flex;
+  border-radius: 10px;
+}
+
+.featuresTools-container > div > figure > img {
+  width: 100%;
+}
+
+#gulp-logo {
+  width: 40px;
+}
+
 .featuresTools-container > div:hover {
-  transform: scale(1.1);
+  transform: translateY(-15px);
 }
 
 .featuresTools-container > div > h4 {
@@ -291,6 +339,7 @@ main > section {
 }
 .featuresTools-container > div > p {
   text-align: center;
+  color: var(--texto-secondary-color);
 }
 
 /* ToggleMode  */
@@ -311,7 +360,7 @@ main > section {
   bottom: 30px;
   left: 30px;
   background-color: var(--text-color);
-  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 5px 1px var(--border-color);
   display: flex;
   justify-content: center;
   align-self: center;
@@ -335,6 +384,9 @@ button > span {
 }
 
 @media screen and (width <= 900px) {
+  html {
+    font-size: 14px;
+  }
   .home figure {
     display: none;
   }
