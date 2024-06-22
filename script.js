@@ -22,5 +22,6 @@ window.addEventListener('load', () => {
     hamburger.addEventListener('click', () => {
 
         menuMobile.classList.toggle('menu-mobile-active');
+        document.body.classList.toggle('menuActive');
     })
 });

@@ -519,6 +519,10 @@ button > span {
   html {
     font-size: 12px;
   }
+
+  body.menuActive {
+    overflow: hidden;
+  }
   
   .home {
     margin: 2rem 0;
@@ -553,7 +557,6 @@ button > span {
     padding: 20px;
   }
 
-
   header > div {
     justify-content: space-between;
     padding: 0 0px;
@@ -569,6 +572,7 @@ button > span {
 
   .hamburger {
     display: block;
+    z-index: 1;
   }
 
   .menu-desktop {
@@ -578,14 +582,14 @@ button > span {
   .menu-mobile-active {
     position: absolute;
     display: flex;
-    top: 70px;
     left: 0;
+    top: 0;
     height: 100vh;
     width: 100vw;
 
 
     justify-content: center;
-    align-items: start;
+    align-items: center;
 
     background-color: white;
   }
