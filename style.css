@@ -422,6 +422,7 @@ button > span {
   }
   
   .home {
+    margin: 2rem 0;
     height: 100vh;
   }
 
