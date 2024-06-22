@@ -850,6 +850,7 @@ button > span {
 
   body.menuActive {
     overflow-y: hidden;
+    z-index: 0;
   }
 
   .home {
@@ -896,7 +897,7 @@ button > span {
 
   .hamburger {
     display: block;
-    z-index: 1;
+    z-index: 2;
   }
 
   .menu-desktop {
@@ -914,6 +915,7 @@ button > span {
     justify-content: center;
     align-items: center;
     background-color: white;
+    z-index: 1;
   }
 
   .menu-mobile > ul {
