@@ -171,7 +171,6 @@ header > div > section > nav > ul > li > img {
   height: 100vh;
   left: -100%;
   top: 0;
-  overflow-y: auto;
   justify-content: center;
   align-items: center;
   z-index: 1;
@@ -857,8 +856,7 @@ button > span {
   }
 
   body.menuActive {
-    overflow-y: hidden;
-    z-index: 0;
+    overflow: hidden;
   }
 
   .home {
@@ -914,6 +912,7 @@ button > span {
 
   .menu-mobile-active {
     left: 0;
+    overflow-y: auto;
   }
 
   .menu-mobile > ul {
