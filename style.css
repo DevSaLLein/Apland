@@ -422,8 +422,19 @@ button > span {
   }
   
   .home {
-    margin-top: 20px;
+    margin-top: 2rem;
     height: 100dvh;
+  }
+
+  header {
+    width: 100%;
+    top: 0;
+    position: fixed;
+    background-color: white;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1;
+    transition: box-shadow 0.5s, background 0.2s ease;
   }
 
   .home figure {
