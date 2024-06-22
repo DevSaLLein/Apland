@@ -530,15 +530,15 @@ main > section {
 /* advertising */
 
 .advertising-container {
-  height: 50dvh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   background-image: linear-gradient(to right, #d6479b, #913db2, #3b30cf);
-  margin-top: 5%;
-  width: 100%;
+  margin-top: 8rem;
+  width: auto;
 }
 
 .advertising-container p {
@@ -547,7 +547,6 @@ main > section {
   font-weight: 600;
   color: white;
   max-width: 550px;
-  padding: 10px;
 }
 
 .advertising-container button {
