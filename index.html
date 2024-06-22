@@ -2,6 +2,9 @@
 <html lang="pt-br">
     <head>
         <link rel="stylesheet" href="./style.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,7 +76,7 @@
 
         <main>
             <section class="home">
-                <div>
+                <div data-aos="fade-right">
                     <span>
                         <img src="./assets/ray.svg" >
                         New updated version 5.12
@@ -86,14 +89,14 @@
                         <img src="./assets/arrowLicense.svg">
                     </button>
                 </div>
-                <figure>
+                <figure data-aos="fade-left">
                     <img src="https://media.istockphoto.com/id/2149870824/pt/foto/young-couple-relaxing-by-the-small-pond-in-the-park.jpg?s=2048x2048&w=is&k=20&c=ZNFjF-2JnJB3UBBoqgz6TQO8lEV-4k4vbNktkat1HZo=">
                 </figure>
             </section>
 
             <section class="features-container">
 
-                <div>
+                <div data-aos="zoom-in">
                     <div class="features-header">
                         <p>Why Buy I?</p>
                         <h3>Key Features</h3>
@@ -187,5 +190,9 @@
         </section>
 
         <script src="./script.js" defer></script>
+
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>
