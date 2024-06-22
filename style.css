@@ -611,7 +611,15 @@ button > span {
     overflow: hidden;
     scroll-snap-stop:always;
   }
-  
+
+  body {
+    overflow-y: hidden;
+  }
+
+  header > div > section  {
+    width: 42px;
+  }
+
   .home {
     margin: 4rem 0;
     height: 100vh;
