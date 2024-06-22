@@ -415,7 +415,7 @@ button > span {
   transition: all 0.4s ease;
 }
 
-@media screen and (width <=900px) {
+@media screen and (max-width: 900px) {
 
   html {
     font-size: 12px;
