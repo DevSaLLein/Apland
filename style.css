@@ -849,7 +849,7 @@ button > span {
   }
 
   body.menuActive {
-    overflow: hidden;
+    overflow-y: hidden;
   }
 
   .home {
