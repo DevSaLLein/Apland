@@ -421,6 +421,11 @@ button > span {
     font-size: 12px;
   }
   
+  .home {
+    margin-top: 20px;
+    height: 100dvh;
+  }
+
   .home figure {
     display: none;
   }
@@ -428,5 +433,15 @@ button > span {
   .toggleMode-container {
     width: 50px;
     height: 50px;
+  }
+
+  .toggleMode-container > button {
+    left: 10px;
+    bottom: 10px;
+  }
+
+  .advertising-container { 
+    height: auto;
+    padding: 20px;
   }
 }
