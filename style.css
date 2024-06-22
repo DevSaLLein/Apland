@@ -909,6 +909,7 @@ button > span {
     left: 0;
     top: 0;
     height: 100vh;
+    overflow-y: auto;
     width: 100vw;
     justify-content: center;
     align-items: center;
