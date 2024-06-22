@@ -604,7 +604,6 @@ button > span {
 @media screen and (max-width: 900px) {
 
   html {
-    overflow-x: hidden;
     font-size: 14px;
   }
 
@@ -645,20 +644,14 @@ button > span {
     padding: 20px;
   }
 
-  header {
-    overflow-x: hidden;
-  }
+
   header > div {
     justify-content: space-between;
-    padding: 0 0px;
+    padding: 0;
   }
 
   header > div >  section > button {
     display: none;
-  }
-
-  header > div > section {
-    gap: 10px;
   }
 
   .hamburger {
