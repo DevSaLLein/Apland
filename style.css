@@ -59,8 +59,22 @@ header > div {
 }
 
 header > div > h1 {
+  display: flex;
+}
+header > div > h1 > span {
   text-transform: uppercase;
-  color: #0d6efd;
+  
+  background-image: linear-gradient(to right, #0d6efd 80%, blue);
+  
+  /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
+  background-clip: text;
+  -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
+
+  /* Terceiro passo: apagar o texto, deixando apenas o fundo atrás dele */
+  -webkit-text-fill-color: transparent;
+
+  /* Cor que contraste com o degradê, caso o navegador não suporte `background-clip: text` */
+  color: black;
 }
 
 header > div > section {
@@ -298,6 +312,7 @@ main > section {
 }
 
 .home > figure {
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
   width: 100%;
   border-radius: 10px;
   position: relative;
@@ -309,26 +324,98 @@ main > section {
 }
 .home > figure > .geometricBlue {
   padding: 10%;
-  top: 0;
-  left: 50px;
+  top: -10px;
+  left: -10px;
   border-radius: 10px 10px 100% 10px;
   background-color: #0d6efd;
+
+  animation: geometricShapeBlue-animation 6000ms infinite ease;
 } 
 
 .home > figure > .geometricYellow {
   border-radius: 100% 0 100% 100%;
   background-color: #f1c40f;
-  bottom: 0;
-  left: 50px;
+  bottom: -20px;
+  left: -20px;
   padding: 6%;
+
+  animation: geometricShapeYellow-animation 8000ms infinite ease;
 }
 
 .home > figure > .geometricRed {
   border-radius: 50% 10px 50% 10px;
   background-color: #f4284a;
   padding: 20% 10%;
-  bottom: 0;
-  right: 0;
+  bottom: -40px;
+  right: -40px;
+
+  animation: geometricShapeRed-animation 9000ms infinite ease;
+}
+
+@keyframes geometricShapeBlue-animation {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  25% {
+    transform: rotateZ(-5deg);
+  }
+
+  50% {
+    transform: rotateZ(10deg);
+  }
+
+  75% {
+    transform: rotateZ(5deg);
+  }
+
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes geometricShapeYellow-animation {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  25% {
+    transform: rotateZ(15deg);
+  }
+
+  50% {
+    transform: rotateZ(-20deg);
+  }
+
+  75% {
+    transform: rotateZ(15deg);
+  }
+
+  100% {
+    transform: rotateZ(0deg);
+  } 
+}
+
+@keyframes geometricShapeRed-animation {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  25% {
+    transform: rotateZ(-10deg);
+  }
+
+  50% {
+    transform: rotateZ(10deg);
+  }
+
+  75% {
+    transform: rotateZ(5deg);
+  }
+
+  100% {
+    transform: rotateZ(0deg);
+  } 
 }
 
 .home > figure > .play-container {
@@ -517,7 +604,7 @@ button > span {
 @media screen and (max-width: 900px) {
 
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   body.menuActive {
