@@ -607,16 +607,12 @@ button > span {
     font-size: 14px;
   }
 
-  .chrome-responsive {
-    margin: 5rem 0;
-  }
-
   body.menuActive {
     overflow: hidden;
   }
   
   .home {
-    margin: 3.5rem 0;
+    margin: 4rem 0;
     height: 100vh;
   }
 
