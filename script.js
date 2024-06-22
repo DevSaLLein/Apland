@@ -7,6 +7,12 @@ window.addEventListener('scroll', () => {
 });
 
 window.addEventListener('load', () => {
+
+    if (/Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor)) {
+        let initialScreen = document.querySelector('.home');
+
+        initialScreen.classList.add("chrome-responsive");
+      } 
     
     let toggleButton = document.querySelector('#toggleButton');
 

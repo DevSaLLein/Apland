@@ -607,6 +607,10 @@ button > span {
     font-size: 14px;
   }
 
+  .chrome-responsive {
+    margin: 5rem 0;
+  }
+
   body.menuActive {
     overflow: hidden;
   }
