@@ -613,7 +613,7 @@ button > span {
   }
 
   body {
-    overflow-y: hidden;
+    overflow-x: hidden;
   }
 
   header > div > section  {
