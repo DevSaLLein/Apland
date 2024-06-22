@@ -530,6 +530,10 @@ main > section {
   box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.5);
 }
 
+body.darkMode .featuresTools-container > .darkMode-container:hover {
+  box-shadow: 0px 8px 15px 0px rgba(255, 255, 255, .5);
+}
+
 .featuresTools-container > .sass-container:hover {
   box-shadow: 0px 8px 15px 0px hotpink;
 }
@@ -981,8 +985,14 @@ button > span {
     border-radius: 7px;
   }
 
+  footer {
+    text-align: center;
+  }
+
   footer > div:first-child {
     gap: 2rem;
+    justify-content: center;
+    align-items: center;
   }
 
   footer > div:first-child > .download-section {
