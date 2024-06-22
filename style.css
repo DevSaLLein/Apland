@@ -361,7 +361,8 @@ main > section {
   text-align: center;
   font-weight: 600;
   color: white;
-  max-width: 500px;
+  max-width: 550px;
+  padding: 10px;
 }
 
 .advertising-container button {
@@ -414,7 +415,7 @@ button > span {
   transition: all 0.4s ease;
 }
 
-@media screen and (max-width:900px) {
+@media screen and (width <=900px) {
 
   html {
     font-size: 12px;
