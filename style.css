@@ -147,9 +147,6 @@ header > div > section > nav > ul > li {
   border-radius: 10px;
 }
 
-.menu-container  > img {
-}
-
 .menu-container:hover {
   overflow: visible;
 }
@@ -295,7 +292,7 @@ main > section {
 }
 
 .home > div > button {
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem 3rem;
   border: none;
   color: var(--text-color);
   background-color: orange;
@@ -303,9 +300,24 @@ main > section {
   font-weight: 600;
   cursor: pointer;
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   gap: 0.3rem;
+}
+
+.home > div > button > div {
+  margin-left: -20px;
+}
+
+.home > div > button > img {
+  transition: all .3s ease;
+  position: absolute;
+  right: 20px;
+}
+
+.home > div > button:hover > img {
+  margin-right: -7px;
 }
 
 .home > div > h2 > span {
@@ -495,7 +507,39 @@ main > section {
   padding: 2rem;
   border-radius: 8px;
   border: 2px solid var(--border-color);
-  transition: transform 0.2s ease;
+  transition: all .3s ease;
+}
+
+.featuresTools-container > .bootstrap-container:hover {
+  box-shadow: 0px 8px 15px 0px violet;
+}
+
+.featuresTools-container > .npm-container:hover {
+  box-shadow: 0px 8px 15px 0px rgba(255, 0, 0, 0.5);
+}
+
+.featuresTools-container > .gulp-container:hover {
+  box-shadow: 0px 8px 15px 0px rgba(255, 0, 0, 0.5);
+}
+
+.featuresTools-container > .pug-container:hover {
+  box-shadow: 0px 8px 15px 0px #ffdb94;
+}
+
+.featuresTools-container > .darkMode-container:hover {
+  box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+.featuresTools-container > .sass-container:hover {
+  box-shadow: 0px 8px 15px 0px hotpink;
+}
+
+.featuresTools-container > .modernDesign-container:hover {
+  box-shadow: 0px 8px 15px 0px #0d6efd;
+}
+
+.featuresTools-container > .fastLoad-container:hover {
+  box-shadow: 0px 8px 15px 0px rgba(255, 0, 0, 0.5);
 }
 
 .featuresTools-container > div > figure {
@@ -558,6 +602,11 @@ main > section {
   font-weight: 600;
   cursor: pointer;
   color: var(--text-color);
+  transition: transform .3s ease;
+}
+
+.advertising-container button:hover {
+  transform: scale(1.1);
 }
 
 /* Footer */
