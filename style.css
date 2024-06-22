@@ -164,11 +164,18 @@ header > div > section > nav > ul > li > img {
 /* Menu-mobile */
 
 .menu-mobile {
-  display: none;
-}
-
-.menu-mobile-active {
-  display: none;
+  background-color: white;
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  left: -100%;
+  top: 0;
+  overflow-y: auto;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: all .5s ease;
 }
 
 .hamburger {
@@ -691,6 +698,7 @@ footer > div:last-child > div > img:hover {
 }
 
 .toggleMode-container > button {
+  z-index: 2;
   padding: 10px;
   width: inherit;
   height: inherit;
@@ -905,17 +913,7 @@ button > span {
   }
 
   .menu-mobile-active {
-    position: fixed;
-    display: flex;
     left: 0;
-    top: 0;
-    height: 100vh;
-    overflow-y: auto;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    z-index: 1;
   }
 
   .menu-mobile > ul {
@@ -928,6 +926,7 @@ button > span {
   .menu-mobile > ul > li {
     font-size: 2rem;
     padding: 1rem 2rem;
+    border-radius: 7px;
   }
 
   footer > div:first-child {
