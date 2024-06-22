@@ -609,6 +609,7 @@ button > span {
 
   body.menuActive {
     overflow: hidden;
+    scroll-snap-stop:always;
   }
   
   .home {
@@ -667,7 +668,7 @@ button > span {
   }
 
   .menu-mobile-active {
-    position: absolute;
+    position: fixed;
     display: flex;
     left: 0;
     top: 0;
