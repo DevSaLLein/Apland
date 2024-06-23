@@ -132,13 +132,11 @@ body.darkMode .menu-container > svg {
 .menu-container > div {
   position: absolute;
   background-color: var(--background-color-menuDropDown);
-
   padding: 1rem 2rem;
   bottom: -90px;
   border: 1px solid transparent;
   border-radius: 10px;
   opacity: 0;
-
   transition: all 0.2s ease;
 }
 
@@ -351,7 +349,6 @@ main > section {
   left: -10px;
   border-radius: 10px 10px 100% 10px;
   background-color: #0d6efd;
-
   animation: geometricShapeBlue-animation 6000ms infinite ease;
 } 
 
@@ -361,7 +358,6 @@ main > section {
   bottom: -20px;
   left: -20px;
   padding: 6%;
-
   animation: geometricShapeYellow-animation 8000ms infinite ease;
 }
 
@@ -371,11 +367,11 @@ main > section {
   padding: 20% 10%;
   bottom: -40px;
   right: -40px;
-
   animation: geometricShapeRed-animation 9000ms infinite ease;
 }
 
 @keyframes geometricShapeBlue-animation {
+
   0% {
     transform: rotateZ(0deg);
   }
@@ -398,6 +394,7 @@ main > section {
 }
 
 @keyframes geometricShapeYellow-animation {
+
   0% {
     transform: rotateZ(0deg);
   }
@@ -420,6 +417,7 @@ main > section {
 }
 
 @keyframes geometricShapeRed-animation {
+  
   0% {
     transform: rotateZ(0deg);
   }
