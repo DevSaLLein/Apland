@@ -109,6 +109,7 @@ header > div > section > nav > ul {
 header > div > section > nav > ul > li {
   position: relative;
   font-size: 0.9rem;
+  color: inherit;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -117,9 +118,14 @@ header > div > section > nav > ul > li {
 
 .menu-container {
   position: relative;
-  transition: all 0.2s ease;}
+  transition: all 0.2s ease;
+}
 
-.menu-container:hover > img {
+body.darkMode .menu-container > svg {
+  fill: white;
+}
+
+.menu-container:hover > svg {
   transform: rotate(270deg);
 }
 
@@ -157,7 +163,11 @@ header > div > section > nav > ul > li {
   bottom: -135px;
 }
 
-header > div > section > nav > ul > li > img {
+.menu-container > div > ul > li{
+  color: inherit;
+}
+
+header > div > section > nav > ul > li > svg {
   transform: rotate(90deg);
   transition: transform 0.2s ease;
 }
@@ -648,7 +658,7 @@ footer > div:first-child {
   margin-top: 4rem;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10rem;
+  gap: 12rem;
 }
 
 .about-section div{
@@ -989,18 +999,31 @@ button > span {
     text-align: center;
   }
 
+  footer > div:first-child > section {
+    min-width: 300px;
+
+    display: flex;
+    align-items: center;
+  }
+
   footer > div:first-child {
     gap: 2rem;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+
   }
 
   footer > div:first-child > .download-section {
     margin-top: 4rem;
   }
 
+  footer > div:first-child > .download-section > div:last-child > button{
+    width: 100%;
+  }
+
   footer > div:last-child {
     gap: 2rem;
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
