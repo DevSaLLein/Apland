@@ -65,7 +65,7 @@ header > div > h1 {
 
 header > div > h1 > span {
   text-transform: uppercase;
-  background-image: linear-gradient(to right, #0d6efd 80%, blue);  
+  background-image: linear-gradient(to right, #0d6efd 80%, blue);
   background-clip: text;
   -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
   -webkit-text-fill-color: transparent;
@@ -161,7 +161,7 @@ body.darkMode .menu-container > svg {
   bottom: -135px;
 }
 
-.menu-container > div > ul > li{
+.menu-container > div > ul > li {
   color: inherit;
 }
 
@@ -178,12 +178,12 @@ header > div > section > nav > ul > li > svg {
   display: flex;
   width: 100vw;
   height: 100vh;
-  left: -100%;
+  left: -100vw;
   top: 0;
   justify-content: center;
   align-items: center;
   z-index: 1;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 .hamburger {
@@ -206,10 +206,8 @@ header > div > section > nav > ul > li > svg {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 2;
-  transition: 
-    stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1)
-  ;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .line-top-bottom {
@@ -319,7 +317,7 @@ main > section {
 }
 
 .home > div > button > img {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   position: absolute;
   right: 20px;
 }
@@ -350,7 +348,7 @@ main > section {
   border-radius: 10px 10px 100% 10px;
   background-color: #0d6efd;
   animation: geometricShapeBlue-animation 6000ms infinite ease;
-} 
+}
 
 .home > figure > .geometricYellow {
   border-radius: 100% 0 100% 100%;
@@ -371,7 +369,6 @@ main > section {
 }
 
 @keyframes geometricShapeBlue-animation {
-
   0% {
     transform: rotateZ(0deg);
   }
@@ -394,7 +391,6 @@ main > section {
 }
 
 @keyframes geometricShapeYellow-animation {
-
   0% {
     transform: rotateZ(0deg);
   }
@@ -413,11 +409,10 @@ main > section {
 
   100% {
     transform: rotateZ(0deg);
-  } 
+  }
 }
 
 @keyframes geometricShapeRed-animation {
-  
   0% {
     transform: rotateZ(0deg);
   }
@@ -436,7 +431,7 @@ main > section {
 
   100% {
     transform: rotateZ(0deg);
-  } 
+  }
 }
 
 .home > figure > .play-container {
@@ -515,7 +510,7 @@ main > section {
   padding: 2rem;
   border-radius: 8px;
   border: 2px solid var(--border-color);
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .featuresTools-container > div > figure {
@@ -577,7 +572,7 @@ main > section {
   font-weight: 600;
   cursor: pointer;
   color: var(--text-color);
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
 }
 
 .advertising-container button:hover {
@@ -591,7 +586,7 @@ footer {
   position: absolute;
   flex-direction: column;
   justify-content: space-between;
-  width: 100vw;
+  width: 100%;
   background-color: #151e2e;
   color: #686e87;
   padding: 2rem 4rem;
@@ -622,7 +617,7 @@ footer > div:first-child {
   gap: 12rem;
 }
 
-.about-section div{
+.about-section div {
   margin-bottom: 5rem;
 }
 
@@ -635,7 +630,7 @@ footer > div:first-child {
 
 .links-section ul > li {
   cursor: pointer;
-  transition: color .2s ease;
+  transition: color 0.2s ease;
 }
 
 .links-section ul > li:hover {
@@ -653,11 +648,12 @@ footer > div:first-child {
   margin-bottom: 20px;
 }
 
-.download-section > div:first-child  figure > img {
+.download-section > div:first-child figure > img {
   width: 100%;
 }
 
-footer > div:first-child p, li {
+footer > div:first-child p,
+li {
   max-width: 300px;
   color: #686e87;
   font-weight: 500;
@@ -671,7 +667,7 @@ footer > div:first-child p, li {
 }
 
 .download-section > div:last-child > h5 {
-  margin-bottom: .1rem;
+  margin-bottom: 0.1rem;
 }
 
 .download-section > div:last-child > input {
@@ -707,7 +703,7 @@ footer > div:last-child > div {
 
 footer > div:last-child > div > img {
   cursor: pointer;
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
   padding: 1rem;
   box-sizing: content-box;
 }
@@ -759,7 +755,6 @@ button > span {
 }
 
 @media screen and (max-width: 900px) {
-
   html {
     font-size: 14px;
   }
@@ -804,7 +799,7 @@ button > span {
     bottom: 10px;
   }
 
-  .advertising-container { 
+  .advertising-container {
     height: auto;
     padding: 20px;
   }
@@ -814,7 +809,7 @@ button > span {
     gap: 12rem;
   }
 
-  header > div >  section > button {
+  header > div > section > button {
     display: none;
   }
 
@@ -836,7 +831,7 @@ button > span {
     margin-top: 5rem;
     display: flex;
     flex-direction: column;
-    gap: 3rem
+    gap: 3rem;
   }
 
   .menu-mobile > ul > li {
@@ -865,7 +860,7 @@ button > span {
     margin-top: 4rem;
   }
 
-  footer > div:first-child > .download-section > div:last-child > button{
+  footer > div:first-child > .download-section > div:last-child > button {
     width: 100%;
   }
 
