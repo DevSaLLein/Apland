@@ -19,6 +19,11 @@
 body {
   transition: background 0.2s ease;
   color: var(--text-color);
+  overflow-x: hidden;
+}
+
+html ::-webkit-scrollbar {
+  display: none;
 }
 
 body.darkMode {
