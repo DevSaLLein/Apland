@@ -242,7 +242,7 @@ main > section {
 .home {
   margin-top: 2rem;
   gap: 10rem;
-  height: 95vh;
+  min-height: 95vh;
 }
 
 .home > div > h2 {
