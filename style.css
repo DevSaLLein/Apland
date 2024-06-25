@@ -240,6 +240,7 @@ main > section {
 }
 
 .home {
+  margin-top: 2rem;
   gap: 10rem;
   height: 95vh;
 }
